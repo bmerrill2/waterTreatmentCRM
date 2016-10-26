@@ -1,13 +1,60 @@
 <!doctype html>
-<html>
+<html ng-app="robertJensen">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Untitled Document</title>
+  <meta charset="UTF-8">
+  <title>ROBERT JENSEN | Ties and Pocket Squares</title>
+  <link rel='stylesheet' type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-ui-grid/ui-grid.css">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="style.css" rel='stylesheet'>
 </head>
+
 <body>
+  <div ng-controller="appCtrl">
+    <md-toolbar class="md-hue-1 md-tall">
+      <div class="md-toolbar-tools">
+        <span flex></span>
 
+        <md-button aria-label="User">
+          </br>
+          <img src="images/logo.png"></md-icon>
+        </md-button>
+      </div>
+      </br>
+      <md-nav-bar class='text' md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+        <md-nav-item md-nav-click="goto('home')" name="home">Home</md-nav-item>
+        <md-nav-item md-nav-click="goto('about')" name="about">About</md-nav-item>
+        <md-nav-item md-nav-click="goto('philosophy')" name="philosophy">Philosophy</md-nav-item>
+        <md-nav-item md-nav-click="goto('ties')" name="ties">Ties</md-nav-item>
+        <md-nav-item md-nav-click="goto('pocketSquares')" name="pocketSquares">Pocket Squares</md-nav-item>
+        <md-nav-item md-nav-click="goto('retailers')" name="retailers">Retailers</md-nav-item>
+        <md-nav-item md-nav-click="goto('contact')" name="contact">Contact</md-nav-item>
+        <!-- these require actual routing with ui-router or ng-route, so they won't work in the demo
+      <md-nav-item md-nav-sref="app.page4" name="page4">Page Four</md-nav-item>
+      <md-nav-item md-nav-href="#page5" name="page5">Page Five</md-nav-item>
+      -->
+      </md-nav-bar>
+    </md-toolbar>
+  </div>
 
-hello world
+  Hello World
 
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
 </body>
+
 </html>
